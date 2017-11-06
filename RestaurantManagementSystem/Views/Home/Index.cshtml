@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="jumbotron">
+    <h2>Order your food on the go !!!</h2>
+    
+    @Html.ActionLink("Login", "Login", "User", new { area = "" }, new { @class = "btn btn-primary btn-lg"})
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    @Html.ActionLink("Create ID", "Registration", "User", new { area = "" }, new { @class = "btn btn-primary btn-lg" })
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Smart Reservation</h2>
+        <p>
+            Our system automatically knows what you want and when you want it
+            <img src="~/Resouces/reservation.png"/> <!--can make a link to it-->
+        </p>
+        <p><a class="btn btn-default" href="https://www.google.com">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Hygenic food</h2>
+        <p>
+            We offer very hygenic food.
+            <img src="~/Resouces/food.png" /> <!--can make a link to it-->
+        </p>
+        <p><a class="btn btn-default" href="https://www.google.com">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Secure payment</h2>
+        <p>
+            We have very high standard security for payment.
+            <img src="~/Resouces/secure_payment.png" /> <!--can make a link to it-->
+        </p>
+        <p><a class="btn btn-default" href="https://www.google.com">Learn more &raquo;</a></p>
+    </div>
+</div>
