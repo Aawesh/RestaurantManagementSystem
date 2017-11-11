@@ -159,6 +159,13 @@ namespace RestaurantManagementSystem.Controllers
                         }
                         else
                         {
+                            if (login.Email == "horizonsmart.contact@gmail.com")
+                            {
+                                TempData["id"] = "admin";
+                            }
+                            else {
+                                TempData["id"] = "user";
+                            }
                             return RedirectToAction("Index", "Home");
                         }
                     }

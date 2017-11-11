@@ -4937,6 +4937,10 @@ a.list-group-item.active > .badge,
   background-color: #eeeeee;
 }
 
+.form-title {
+    margin-top:80px;
+}
+
 .jumbotron h1 {
   line-height: 1;
   color: inherit;

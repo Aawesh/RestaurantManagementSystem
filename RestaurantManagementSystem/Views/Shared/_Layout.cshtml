@@ -17,11 +17,42 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li style="margin-top:25px";>@Html.ActionLink("RestaurantMS", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</limargin-top:50px;>
-                    <li style="margin-top:25px";>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li style="margin-top:25px";>@Html.ActionLink("About", "About", "Home")</li>
-                    <li style="margin-top:25px";>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li style="margin-top:25px;">@Html.ActionLink("RestaurantMS", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
+                        <li style="margin-top:25px;">@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li style="margin-top:25px;">@Html.ActionLink("About", "About", "Home")</li>
+                        <li style="margin-top:25px;">@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+                        if (@HttpContext.Current.User.Identity.Name == "horizonsmart.contact@gmail.com")
+                        {
+                            <li style="margin-top:25px;">@Html.ActionLink("Inventory", "Inventory", "Home")</li>
+                        }
+                        <li style="margin-top:25px;">@Html.ActionLink("Reservation", "Reservation", "Home")</li>
+                        <li style="margin-left:400px;margin-top:40px;text-align:left">
+                            @if (Request.IsAuthenticated)
+                            {
+                                using (Html.BeginForm("Logout", "User", FormMethod.Post, new { id = "logoutForm" }))
+                                {
+                                    <a href="javascript:document.getElementById('logoutForm').submit()">Logout</a>
+                                }
+                            }
+                        </li>
+                    }
+                    else
+                    {
+                        <li style="margin-top:25px;">@Html.ActionLink("RestaurantMS", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
+                        <li style="margin-top:25px;">@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li style="margin-top:25px;">@Html.ActionLink("About", "About", "Home")</li>
+                        <li style="margin-top:25px;">@Html.ActionLink("Contact", "Contact", "Home")</li>
+                       
+                    }
+                    
+                   
+
                 </ul>
+               
             </div>
         </div>
     </div>

@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Login";
 }
-<h2>Login</h2>
+<h2 style=" margin-top: 80px">Login</h2>
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
@@ -45,15 +45,23 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Login" class="btn btn-default" />
+                <input type="submit" value="Login" class="btn btn-primary btn-lg" />
+            </div>
+        </div>
+
+        <br /><br />
+        <div class="form-group">
+            <div class="control-label col-md-2">
+                @Html.Label("New User?")
+            </div>
+            <div class="col-md-10">
+                @Html.ActionLink("Sign Up", "Registration", "User", new { area = "" }, new { @class = "btn btn-default" })
             </div>
         </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Register Now", "Registration","User")
-</div>
+
 
 
 @section Scripts{

@@ -8,6 +8,7 @@ namespace RestaurantManagementSystem.Controllers
 {
     public class HomeController : Controller
     {
+        [Authorize]
         public ActionResult Index()
         {
             return View();
@@ -26,5 +27,22 @@ namespace RestaurantManagementSystem.Controllers
 
             return View();
         }
+
+        [Authorize]
+        public ActionResult Inventory()
+        {
+            ViewBag.Message = "Your Inventory management page";
+
+            return View();
+        }
+
+        [Authorize]
+        public ActionResult Reservation()
+        {
+            ViewBag.Message = "Your Reservation page";
+
+            return View();
+        }
+
     }
 }
