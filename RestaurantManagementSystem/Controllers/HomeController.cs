@@ -31,7 +31,7 @@ namespace RestaurantManagementSystem.Controllers
         [Authorize]
         public ActionResult Inventory()
         {
-            ViewBag.Message = "Your Inventory management page";
+            ViewBag.Message = "Inventory management page";
 
             return View();
         }
@@ -39,7 +39,15 @@ namespace RestaurantManagementSystem.Controllers
         [Authorize]
         public ActionResult Reservation()
         {
-            ViewBag.Message = "Your Reservation page";
+            ViewBag.Message = "Reservation page";
+
+            return View();
+        }
+
+        [Authorize]
+        public ActionResult Sales()
+        {
+            ViewBag.Message = "Sales page";
 
             return View();
         }
