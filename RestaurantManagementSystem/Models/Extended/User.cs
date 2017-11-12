@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using RestaurantManagementSystem.CustomValidation;
 //namespace RestaurantManagementSystem.Models.Extended
 namespace RestaurantManagementSystem.Models
 {
@@ -10,8 +11,11 @@ namespace RestaurantManagementSystem.Models
     public partial class User
     {
         public string ConfirmPassword { get; set; }
-    }
 
+        public bool TermsAndConditions { get; set; }
+
+    }
+    
     public class UserMetadata
     {
         [Display(Name ="First Name")]
@@ -40,5 +44,8 @@ namespace RestaurantManagementSystem.Models
         [DataType(DataType.Password)]
         [Compare("Password",ErrorMessage ="Confirm password and password do not match")]
         public string ConfirmPassword { get; set; }
+
+        [MustBeTrue(ErrorMessage = "You have to accept the terms and conditions!")]
+        public bool TermsAndConditions { get; set; }
     }
 }
