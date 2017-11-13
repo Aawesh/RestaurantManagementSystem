@@ -2049,9 +2049,9 @@ fieldset[disabled] .btn {
 }
 
 .btn-default {
-  color: #333333;
-  background-color: #ffffff;
-  border-color: #cccccc;
+    color: #333333;
+    background-color: #ffffff;
+    border-color: #0000B2;
 }
 
 .btn-default:hover,
@@ -5085,6 +5085,12 @@ a.thumbnail:focus {
   color: #b94a48;
   background-color: #f2dede;
   border-color: #eed3d7;
+}
+
+.alert-success {
+    color: #007F00;
+    background-color: #f2dede;
+    border-color: #eed3d7;
 }
 
 .alert-danger hr {
