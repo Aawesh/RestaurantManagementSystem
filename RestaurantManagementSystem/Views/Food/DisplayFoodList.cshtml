@@ -11,6 +11,16 @@
 <p>
     @Html.ActionLink("Insert New Food", "InsertFood", new { area = "" }, new { @class = "btn btn-default" })
 </p>
+<br/>
+@using (Html.BeginForm("DisplayFoodList", "Food", FormMethod.Get))
+{
+    <p>
+        @Html.Label("Food") &nbsp;
+        @Html.TextBox("SearchString") &nbsp;&nbsp;&nbsp;
+        <input type="submit" value="Search" class="btn btn-default" />
+    </p>
+}
+
 <table class="table">
     <tr>
         <th>

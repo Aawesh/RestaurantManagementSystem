@@ -51,6 +51,20 @@ namespace RestaurantManagementSystem.Controllers
             return View(foodEntities.Foods.ToList());
         }
 
+        [HttpGet]
+        public ActionResult DisplayFoodList(string searchString)
+        {
+            var food = from m in foodEntities.Foods
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                food = food.Where(s => s.Name.Contains(searchString));
+            }
+
+            return View(food);
+        }
+
         [Authorize]
         public ActionResult DeleteFood(int id=0)
         {

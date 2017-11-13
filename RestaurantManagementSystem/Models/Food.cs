@@ -19,8 +19,8 @@ namespace RestaurantManagementSystem.Models
         public string Amount { get; set; }
         public decimal Price { get; set; }
         public string FoodType { get; set; }
-        public System.DateTime BoughtDate { get; set; }
-        public System.DateTime ExpirationDate { get; set; }
-        public System.DateTime ManufacturedDate { get; set; }
+        public DateTime BoughtDate { get; set; }
+        public DateTime ExpirationDate { get; set; }
+        public DateTime ManufacturedDate { get; set; }
     }
 }

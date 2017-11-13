@@ -5263,12 +5263,13 @@ a.thumbnail:focus {
 }
 
 .list-group-item {
-  position: relative;
-  display: block;
-  padding: 10px 15px;
-  margin-bottom: -1px;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
+    position: relative;
+    font-size: 15px;
+    display: block;
+    padding: 10px 15px 30px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
 }
 
 .list-group-item:first-child {

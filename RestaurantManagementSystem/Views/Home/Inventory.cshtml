@@ -1,6 +1,18 @@
 ﻿@{
     ViewBag.Title = "Inventory";
 }
-<div class="jumbotron">
-    <h2>@ViewBag.Title.</h2>
+<h2 style=" margin-top: 80px">Administrator</h2>
+<br/>
+
+<div class="list-group">
+
+    <a href="#" class="list-group-item active"  style="font-weight:bold; font-size:23px;">
+        Administrative actions
+    </a>
+    @Html.ActionLink("Manage Inventory", "DisplayFoodList", "Food",new { area = "" }, new { @class = "list-group-item list-group-item-action" })
+    @Html.ActionLink("Manage Reservations", "Reservation", new { area = "" }, new { @class = "list-group-item list-group-item-action" })
+    @Html.ActionLink("Manage Users", "", "Food", new { area = "" }, new { @class = "list-group-item list-group-item-action" })
+    @Html.ActionLink("Manage orders", "", "Food", new { area = "" }, new { @class = "list-group-item list-group-item-action" })
+    @Html.ActionLink("View Sales", "Sales", new { area = "" }, new { @class = "list-group-item list-group-item-action" })
+   
 </div>
