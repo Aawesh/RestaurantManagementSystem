@@ -330,6 +330,7 @@
     <Content Include="Views\Sales\DisplaySalesList.cshtml" />
     <Content Include="Views\Sales\EditSales.cshtml" />
     <Content Include="Views\Sales\DeleteSales.cshtml" />
+    <Content Include="Views\Sales\SalesDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

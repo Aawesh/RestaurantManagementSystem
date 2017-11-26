@@ -27,11 +27,8 @@
                         if (@HttpContext.Current.User.Identity.Name == "horizonsmart.contact@gmail.com")
                         {
                             <li style="margin-top:25px;">@Html.ActionLink("Inventory", "Inventory", "Home")</li>
-                        }
-                        <li style="margin-top:25px;">@Html.ActionLink("Reservation", "Reservation", "Home")</li>
-                        if (@HttpContext.Current.User.Identity.Name == "horizonsmart.contact@gmail.com")
-                        {
                             <li style="margin-top:25px;">@Html.ActionLink("Sales", "DisplaySalesList", "Sales")</li>
+                            <li style="margin-top:25px;">@Html.ActionLink("Promotion", "SendCoupon", "Promotion")</li>
                         }
 
                         <li style="margin-top:25px;">@Html.ActionLink("About", "About", "Home")</li>
@@ -41,7 +38,7 @@
                             {
                                 using (Html.BeginForm("Logout", "User", FormMethod.Post, new { id = "logoutForm" }))
                                 {
-                                    <a href="javascript:document.getElementById('logoutForm').submit()">Logout</a>
+                                    <a href="javascript:document.getElementById('logoutForm').submit()">@HttpContext.Current.User.Identity.Name.Substring(0,8) Logout</a>
                                 }
                             }
                         </li>
