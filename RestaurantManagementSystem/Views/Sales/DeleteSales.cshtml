@@ -1,0 +1,61 @@
+﻿@model RestaurantManagementSystem.Models.Sale
+
+@{
+    ViewBag.Title = "DeleteSales";
+}
+
+<h2 style=" margin-top: 80px">Delete Sales Record</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <br />
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Income)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Income)
+        </dd>
+
+        <br />
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Expenditure)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Expenditure)
+        </dd>
+
+        <br />
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Profit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Profit)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+
+            <input type="submit" value="Delete" class="btn btn-default" />  &nbsp;&nbsp;&nbsp;
+            @Html.ActionLink("Back to List", "DisplaySalesList", new { area = "" }, new { @class = "btn btn-default" })
+        </div>
+    }
+</div>

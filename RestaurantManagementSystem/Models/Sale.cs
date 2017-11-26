@@ -11,15 +11,12 @@ namespace RestaurantManagementSystem.Models
 {
     using System;
     
-    public partial class Food
+    public partial class Sale
     {
-        public int FoodId { get; set; }
-        public string Name { get; set; }
-        public string Amount { get; set; }
-        public decimal Price { get; set; }
-        public string FoodType { get; set; }
-        public DateTime BoughtDate { get; set; }
-        public DateTime ExpirationDate { get; set; }
-        public DateTime ManufacturedDate { get; set; }
+        public int SalesId { get; set; }
+        public DateTime Date { get; set; }
+        public decimal Income { get; set; }
+        public decimal Expenditure { get; set; }
+        public decimal Profit { get; set; }
     }
 }

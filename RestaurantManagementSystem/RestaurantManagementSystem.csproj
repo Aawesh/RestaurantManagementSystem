@@ -152,6 +152,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\FoodController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SalesController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Crypto.cs" />
     <Compile Include="CustomValidation\CustomValidation.cs" />
@@ -159,6 +160,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Extended\Food.cs" />
+    <Compile Include="Models\Extended\Sale.cs" />
     <Compile Include="Models\Extended\User.cs" />
     <Compile Include="Models\Food.cs">
       <DependentUpon>FoodModel.tt</DependentUpon>
@@ -177,6 +179,24 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FoodModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sale.cs">
+      <DependentUpon>SalesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SalesModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SalesModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SalesModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\User.cs">
       <DependentUpon>UserModel.tt</DependentUpon>
@@ -216,6 +236,16 @@
       <DependentUpon>FoodModel.edmx</DependentUpon>
       <LastGenOutput>FoodModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\SalesModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SalesModel.edmx</DependentUpon>
+      <LastGenOutput>SalesModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\SalesModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SalesModel.edmx</DependentUpon>
+      <LastGenOutput>SalesModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\UserModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>UserModel.edmx</DependentUpon>
@@ -251,6 +281,13 @@
     </EntityDeploy>
     <Content Include="Models\FoodModel.edmx.diagram">
       <DependentUpon>FoodModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\SalesModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SalesModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\SalesModel.edmx.diagram">
+      <DependentUpon>SalesModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -290,6 +327,9 @@
     <Content Include="Views\Food\DeleteFood.cshtml" />
     <Content Include="Views\Food\FoodDetails.cshtml" />
     <Content Include="Views\Food\EditFood.cshtml" />
+    <Content Include="Views\Sales\DisplaySalesList.cshtml" />
+    <Content Include="Views\Sales\EditSales.cshtml" />
+    <Content Include="Views\Sales\DeleteSales.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

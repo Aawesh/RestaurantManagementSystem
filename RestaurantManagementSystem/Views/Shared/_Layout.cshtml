@@ -31,7 +31,7 @@
                         <li style="margin-top:25px;">@Html.ActionLink("Reservation", "Reservation", "Home")</li>
                         if (@HttpContext.Current.User.Identity.Name == "horizonsmart.contact@gmail.com")
                         {
-                            <li style="margin-top:25px;">@Html.ActionLink("Sales", "Sales", "Home")</li>
+                            <li style="margin-top:25px;">@Html.ActionLink("Sales", "DisplaySalesList", "Sales")</li>
                         }
 
                         <li style="margin-top:25px;">@Html.ActionLink("About", "About", "Home")</li>

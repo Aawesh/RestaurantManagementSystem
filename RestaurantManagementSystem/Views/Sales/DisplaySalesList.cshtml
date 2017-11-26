@@ -1,0 +1,50 @@
+﻿@model IEnumerable<RestaurantManagementSystem.Models.Sale>
+
+@{
+    ViewBag.Title = "DisplaySalesList";
+}
+
+<h2 style=" margin-top: 80px">Sales List</h2>
+
+<br />
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Income)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Expenditure)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Profit)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Income)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Expenditure)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Profit)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditSales","Sales", new { id = item.SalesId }, new { @class = "btn btn-default" }) &nbsp;
+            @Html.ActionLink("Details", "SalesDetails", "Sales", new { id = item.SalesId }, new { @class = "btn btn-default" }) &nbsp;
+            @Html.ActionLink("Delete", "DeleteSales", "Sales", new { id = item.SalesId }, new { @class = "btn btn-default" })
+        </td>
+    </tr>
+}
+
+</table>
