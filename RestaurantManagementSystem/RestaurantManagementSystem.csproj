@@ -287,6 +287,10 @@
       <LastGenOutput>UserModel.cs</LastGenOutput>
     </Content>
     <Content Include="Resouces\food.png" />
+    <Content Include="Resouces\image1.jpg" />
+    <Content Include="Resouces\image2.jpg" />
+    <Content Include="Resouces\image4.jpg" />
+    <Content Include="Resouces\image5.jpg" />
     <Content Include="Resouces\logo1.png" />
     <Content Include="Resouces\reservation.png" />
     <Content Include="Resouces\rest.jpg" />
