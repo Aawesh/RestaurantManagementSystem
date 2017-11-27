@@ -9,6 +9,8 @@
 
 namespace RestaurantManagementSystem.Models
 {
+    using System;
+    using System.Collections.Generic;
     
     public partial class Coupon
     {
@@ -16,6 +18,6 @@ namespace RestaurantManagementSystem.Models
         public string CouponNumber { get; set; }
         public string Email { get; set; }
         public decimal DiscountPercent { get; set; }
+        public System.DateTime ExpiryDate { get; set; }
     }
-
 }

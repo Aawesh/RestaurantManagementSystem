@@ -53,7 +53,8 @@ namespace RestaurantManagementSystem.Controllers
             {
                 salesEntities.Entry(sale).State = EntityState.Modified;
                 salesEntities.SaveChanges();
-                return RedirectToAction("SalesDetails");
+                ViewBag.Message = "Sales " + sale.SalesId + " edited successfully";
+                return RedirectToAction("DisplaySalesList");
             }
             return View(sale);
         }
@@ -77,7 +78,8 @@ namespace RestaurantManagementSystem.Controllers
             Sale sale = salesEntities.Sales.Find(id);
             salesEntities.Sales.Remove(sale);
             salesEntities.SaveChanges();
-            return RedirectToAction("SalesDetails");
+            ViewBag.Message = "Sales dated" + sale.Date.ToString().Substring(0,11) + " deleted successfully";
+            return RedirectToAction("DisplaySalesList");
         }
     }
 }

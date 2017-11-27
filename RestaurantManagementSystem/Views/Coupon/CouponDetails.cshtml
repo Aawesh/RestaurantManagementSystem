@@ -1,0 +1,54 @@
+﻿@model RestaurantManagementSystem.Models.Coupon
+
+@{
+    ViewBag.Title = "CouponDetails";
+}
+
+<h2 style=" margin-top: 80px">Coupon Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CouponNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CouponNumber)
+        </dd>
+        </br>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        </br>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiscountPercent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiscountPercent)
+        </dd>
+
+        </br>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpiryDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpiryDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditCoupon", new { id = Model.CouponId }, new { @class = "btn btn-default" }) &nbsp;
+    @Html.ActionLink("Back to List", "DisplayCouponList", new { area = "" }, new { @class = "btn btn-default" })
+</p>

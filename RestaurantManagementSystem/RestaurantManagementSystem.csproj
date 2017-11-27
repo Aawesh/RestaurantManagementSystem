@@ -369,6 +369,10 @@
     <Content Include="Views\Sales\DeleteSales.cshtml" />
     <Content Include="Views\Sales\SalesDetails.cshtml" />
     <Content Include="Views\Coupon\SendCoupon.cshtml" />
+    <Content Include="Views\Coupon\DisplayCouponList.cshtml" />
+    <Content Include="Views\Coupon\CouponDetails.cshtml" />
+    <Content Include="Views\Coupon\EditCoupon.cshtml" />
+    <Content Include="Views\Coupon\DeleteCoupon.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -13,6 +13,7 @@
           <Property Name="CouponNumber" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="DiscountPercent" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ExpiryDate" Type="date" Nullable="false" />
         </EntityType>
         <EntityContainer Name="CouponModelStoreContainer">
           <EntitySet Name="Coupons" EntityType="Self.Coupons" Schema="dbo" store:Type="Tables" />
@@ -30,6 +31,7 @@
           <Property Name="CouponNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DiscountPercent" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ExpiryDate" Type="DateTime" Nullable="false" Precision="0" />
         </EntityType>
         <EntityContainer Name="CouponEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Coupons" EntityType="Self.Coupon" />
@@ -47,6 +49,7 @@
                 <ScalarProperty Name="CouponNumber" ColumnName="CouponNumber" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="DiscountPercent" ColumnName="DiscountPercent" />
+                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

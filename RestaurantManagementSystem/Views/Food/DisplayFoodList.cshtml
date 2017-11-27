@@ -8,6 +8,13 @@
 
 <br/>
 
+@if (@ViewBag.Message != null)
+{
+    <div class="alert alert-success">
+        <strong>@ViewBag.Message!</strong>
+    </div>
+}
+
 <p>
     @Html.ActionLink("Insert New Food", "InsertFood", new { area = "" }, new { @class = "btn btn-default" })
 </p>

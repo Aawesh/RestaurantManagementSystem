@@ -1,0 +1,63 @@
+﻿@model IEnumerable<RestaurantManagementSystem.Models.Coupon>
+
+@{
+    ViewBag.Title = "DisplayCouponList";
+}
+
+<h2 style=" margin-top: 80px">Coupon List</h2>
+
+<br />
+
+<p>
+    @Html.ActionLink("Send coupon", "SendCoupon", new { area = "" }, new { @class = "btn btn-default" })
+</p>
+<br />
+@using (Html.BeginForm("DisplayCouponList", "Coupon", FormMethod.Get))
+{
+    <p>
+        @Html.Label("Coupon Number: ") &nbsp;
+        @Html.TextBox("SearchString") &nbsp;&nbsp;&nbsp;
+        <input type="submit" value="Search" class="btn btn-default" />
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CouponNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiscountPercent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpiryDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CouponNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiscountPercent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpiryDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditCoupon", new { id = item.CouponId }, new { @class = "btn btn-default" }) &nbsp;
+            @Html.ActionLink("Details", "CouponDetails", new { id = item.CouponId }, new { @class = "btn btn-default" }) &nbsp;
+            @Html.ActionLink("Delete", "DeleteCoupon", new { id = item.CouponId }, new { @class = "btn btn-default" })
+        </td>
+    </tr>
+}
+
+</table>
