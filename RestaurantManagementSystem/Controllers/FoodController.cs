@@ -39,7 +39,7 @@ namespace RestaurantManagementSystem.Controllers
                 Message = "Successful food entry";
                 ViewBag.Message = Message;
 
-                return RedirectToAction("InsertFood");
+                return View();
                
             }
             return View(food);

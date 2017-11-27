@@ -150,6 +150,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CouponController.cs" />
     <Compile Include="Controllers\FoodController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SalesController.cs" />
@@ -159,6 +160,25 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Coupon.cs">
+      <DependentUpon>CouponModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CouponModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CouponModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CouponModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CouponModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CouponModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CouponModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Extended\Coupon.cs" />
     <Compile Include="Models\Extended\Food.cs" />
     <Compile Include="Models\Extended\Sale.cs" />
     <Compile Include="Models\Extended\User.cs" />
@@ -226,6 +246,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\CouponModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CouponModel.edmx</DependentUpon>
+      <LastGenOutput>CouponModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\CouponModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CouponModel.edmx</DependentUpon>
+      <LastGenOutput>CouponModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\FoodModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>FoodModel.edmx</DependentUpon>
@@ -268,13 +298,6 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Models\UserModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>UserModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\UserModel.edmx.diagram">
-      <DependentUpon>UserModel.edmx</DependentUpon>
-    </Content>
     <EntityDeploy Include="Models\FoodModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>FoodModel.Designer.cs</LastGenOutput>
@@ -288,6 +311,20 @@
     </EntityDeploy>
     <Content Include="Models\SalesModel.edmx.diagram">
       <DependentUpon>SalesModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\UserModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>UserModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\UserModel.edmx.diagram">
+      <DependentUpon>UserModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\CouponModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CouponModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\CouponModel.edmx.diagram">
+      <DependentUpon>CouponModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -331,6 +368,7 @@
     <Content Include="Views\Sales\EditSales.cshtml" />
     <Content Include="Views\Sales\DeleteSales.cshtml" />
     <Content Include="Views\Sales\SalesDetails.cshtml" />
+    <Content Include="Views\Coupon\SendCoupon.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

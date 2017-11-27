@@ -30,7 +30,7 @@ namespace RestaurantManagementSystem.Controllers
             if (ModelState.IsValid)
             {
 
-                #region //Email is already Exist 
+                #region //Email already Exist 
                 var isExist = IsEmailExist(user.Email);
                 if (isExist)
                 {

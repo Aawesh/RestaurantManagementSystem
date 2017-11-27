@@ -30,6 +30,11 @@ namespace RestaurantManagementSystem.Models
         [Required(AllowEmptyStrings = false, ErrorMessage = "Phone number required")]
         public string PhoneNumber { get; set; }
 
+        [Display(Name = "Birthday")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
+        public DateTime Birthday { get; set; }
+
         [Display(Name ="Email ID")]
         [Required(AllowEmptyStrings =false, ErrorMessage ="Email ID required")]
         [DataType(DataType.EmailAddress)]

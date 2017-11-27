@@ -9,19 +9,13 @@
 
 namespace RestaurantManagementSystem.Models
 {
-    using System;
-    using System.Collections.Generic;
     
-    public partial class User
+    public partial class Coupon
     {
-        public int UserId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public decimal PhoneNumber { get; set; }
-        public DateTime Birthday { get; set; }
+        public int CouponId { get; set; }
+        public string CouponNumber { get; set; }
         public string Email { get; set; }
-        public string Password { get; set; }
-        public bool IsEmailVerified { get; set; }
-        public System.Guid ActivationCode { get; set; }
+        public decimal DiscountPercent { get; set; }
     }
+
 }
