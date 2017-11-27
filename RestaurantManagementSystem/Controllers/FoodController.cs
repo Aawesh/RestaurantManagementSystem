@@ -39,7 +39,7 @@ namespace RestaurantManagementSystem.Controllers
                 Message = "Successful food entry";
                 ViewBag.Message = Message;
 
-                return View();
+                return RedirectToAction("InsertFood");
                
             }
             return View(food);
@@ -84,7 +84,6 @@ namespace RestaurantManagementSystem.Controllers
             Food food = foodEntities.Foods.Find(id);
             foodEntities.Foods.Remove(food);
             foodEntities.SaveChanges();
-            ViewBag.Message = "Food " + food.Name + " deleted successfully";
             return RedirectToAction("DisplayFoodList");
         }
 
@@ -119,7 +118,6 @@ namespace RestaurantManagementSystem.Controllers
             {
                 foodEntities.Entry(food).State = EntityState.Modified;
                 foodEntities.SaveChanges();
-                ViewBag.Message = "Food " + food.Name + " edited successfully";
                 return RedirectToAction("DisplayFoodList");
             }
             return View(food);
