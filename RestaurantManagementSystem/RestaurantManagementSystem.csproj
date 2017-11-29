@@ -286,8 +286,8 @@
       <DependentUpon>UserModel.edmx</DependentUpon>
       <LastGenOutput>UserModel.cs</LastGenOutput>
     </Content>
-    <Content Include="Resouces\food.png" />
     <Content Include="Resouces\image1.jpg" />
+    <Content Include="Resouces\food.png" />
     <Content Include="Resouces\image2.jpg" />
     <Content Include="Resouces\image4.jpg" />
     <Content Include="Resouces\image5.jpg" />
