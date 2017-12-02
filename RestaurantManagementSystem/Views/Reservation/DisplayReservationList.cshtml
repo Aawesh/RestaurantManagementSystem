@@ -1,0 +1,79 @@
+﻿@model IEnumerable<RestaurantManagementSystem.Models.Reservation>
+
+@{
+    ViewBag.Title = "DisplayReservationList";
+    TempData["email"] = @HttpContext.Current.User.Identity.Name;
+}
+
+<h2 style=" margin-top: 80px">Reservation List</h2>
+
+@if (@ViewBag.Message != null)
+{
+    <div class="alert alert-success">
+        <strong>@ViewBag.Message!</strong>
+    </div>
+}
+
+<p>
+    @Html.ActionLink("New Reservation", "InsertReservation", "Reservation", new { area = "" }, new { @class = "btn btn-default" })
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Persons)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FromTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ToTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Details)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Total) $ 
+        </th>
+       
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Persons)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FromTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ToTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Details)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Total)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Details", "ReservationDetailsMore", "Reservation", new { id = item.ReservationId }, new { @class = "btn btn-default" }) &nbsp;
+            @Html.ActionLink("Delete", "DeleteReservationAdmin", "Reservation", new { id = item.ReservationId }, new { @class = "btn btn-default" })
+        </td>
+    </tr>
+}
+
+</table>

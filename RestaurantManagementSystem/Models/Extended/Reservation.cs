@@ -15,7 +15,7 @@ namespace RestaurantManagementSystem.Models
         [Range(0, 10, ErrorMessage = "Please enter valid integer Number")]
         public int Persons { get; set; }
 
-        [Display(Name = "Reservation for")]
+        [Display(Name = "Reservation date")]
         [DataType(DataType.Date)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime Date { get; set; }

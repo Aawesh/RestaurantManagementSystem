@@ -422,6 +422,11 @@
     <Content Include="Views\Reservation\InsertReservation.cshtml" />
     <Content Include="Views\Reservation\ReservationDetails.cshtml" />
     <Content Include="Views\Reservation\ReservationSuccessful.cshtml" />
+    <Content Include="Views\Reservation\DisplayReservationList.cshtml" />
+    <Content Include="Views\Reservation\CheckReservation.cshtml" />
+    <Content Include="Views\Reservation\ReservationDetailsMore.cshtml" />
+    <Content Include="Views\Reservation\DeleteReservation.cshtml" />
+    <Content Include="Views\Reservation\DeleteReservationAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

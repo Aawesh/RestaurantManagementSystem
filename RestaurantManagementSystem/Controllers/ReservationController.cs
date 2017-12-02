@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using RestaurantManagementSystem.Models;
+using System.Data.Entity;
 
 
 namespace RestaurantManagementSystem.Controllers
@@ -107,8 +108,85 @@ namespace RestaurantManagementSystem.Controllers
             return View();
         }
 
-        public ActionResult ReservationSuccessful() {
+        public ActionResult ReservationSuccessful()
+        {
             return View();
+        }
+
+        public ActionResult DisplayReservationList()
+        {
+            return View(reservationEntities.Reservations.ToList());
+        }
+
+        public ActionResult CheckReservation()
+        {
+            string email = TempData["email"].ToString();
+            var reservation = from m in reservationEntities.Reservations
+                       select m;
+
+            if (!String.IsNullOrEmpty(email))
+            {
+                reservation = reservation.Where(s => s.Email.Contains(email));
+            }
+
+            return View(reservation);
+        }
+
+        [Authorize]
+        public ActionResult ReservationDetailsMore(int id = 0)
+        {
+            Reservation reservation = reservationEntities.Reservations.Find(id);
+            if (reservation == null)
+            {
+                return HttpNotFound();
+            }
+            return View(reservation);
+        }
+
+        [Authorize]
+        public ActionResult DeleteReservation(int id = 0)
+        {
+            Reservation reservation = reservationEntities.Reservations.Find(id);
+            if (reservation == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(reservation);
+        }
+
+        [HttpPost, ActionName("DeleteReservation")]
+        [Authorize]
+        public ActionResult DeleteConfirmed(int id = 0)
+        {
+            Reservation reservation = reservationEntities.Reservations.Find(id);
+            reservationEntities.Reservations.Remove(reservation);
+            reservationEntities.SaveChanges();
+            ViewBag.Message = "Resrvation cancelled successfully";
+            return RedirectToAction("CheckReservation");
+        }
+
+        [Authorize]
+        public ActionResult DeleteReservationAdmin(int id = 0)
+        {
+            Reservation reservation = reservationEntities.Reservations.Find(id);
+            if (reservation == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(reservation);
+        }
+
+        [HttpPost, ActionName("DeleteReservationAdmin")]
+        [Authorize]
+        public ActionResult DeleteConfirmedAdmin(int id = 0)
+        {
+            Reservation reservation = reservationEntities.Reservations.Find(id);
+            reservationEntities.Reservations.Remove(reservation);
+            reservationEntities.SaveChanges();
+            ViewBag.Message = "Resrvation cancelled successfully";
+            return RedirectToAction("DisplayReservationList");
         }
     }
 }
