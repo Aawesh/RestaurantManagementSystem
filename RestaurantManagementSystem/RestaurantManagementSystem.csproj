@@ -316,6 +316,11 @@
       <DependentUpon>UserModel.edmx</DependentUpon>
       <LastGenOutput>UserModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Resouces\boneless_chicken.jpg" />
+    <Content Include="Resouces\chicken_nuggets.jpg" />
+    <Content Include="Resouces\chicken_pizza.jpg" />
+    <Content Include="Resouces\chicken_sandwich.png" />
+    <Content Include="Resouces\hamburger.jpeg" />
     <Content Include="Resouces\image1.jpg" />
     <Content Include="Resouces\food.png" />
     <Content Include="Resouces\image2.jpg" />

@@ -62,7 +62,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.ToTime, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10" >
                 @Html.DropDownListFor(model => model.ToTime, new List<SelectListItem>
                         { new SelectListItem{Text="6AM", Value="6 AM"},
                         new SelectListItem{Text="7 AM", Value="7 AM",Selected = true },
@@ -83,8 +83,10 @@
         </div>
 
         <div class="form-group">
+            <img src="~/Resouces/chicken_sandwich.png" alt="" width="300" height="300">
             @Html.LabelFor(model => model.Menu1, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+           <strong style="font-size:20px;margin:30px;">$8</strong>
+            <div class="col-md-10" style="margin-left:500px;">
                 @Html.DropDownListFor(model => model.Menu1, new List<SelectListItem>
                         { new SelectListItem{Text="0", Value="0",Selected = true },
                         new SelectListItem{Text="1", Value="1"},
@@ -98,9 +100,14 @@
             </div>
         </div>
 
+        <br/>
+        <br />
+
         <div class="form-group">
+            <img src="~/Resouces/chicken_nuggets.jpg" alt="" width="300" height="300" />
             @Html.LabelFor(model => model.Menu2, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <strong style="font-size:20px;margin:30px;">$4</strong>
+            <div class="col-md-10" style="margin-left:500px;">
                 @Html.DropDownListFor(model => model.Menu2, new List<SelectListItem>
                         { new SelectListItem{Text="0", Value="0",Selected = true },
                         new SelectListItem{Text="1", Value="1"},
@@ -113,10 +120,13 @@
                 @Html.ValidationMessageFor(model => model.Menu2, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        <br/>
+        <br />
         <div class="form-group">
+            <img src="~/Resouces/chicken_pizza.jpg" alt="" width="300" height="300" />
             @Html.LabelFor(model => model.Menu3, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <strong style="font-size:20px;margin:30px;">$5</strong>
+            <div class="col-md-10" style="margin-left:500px;">
                 @Html.DropDownListFor(model => model.Menu3, new List<SelectListItem>
                         { new SelectListItem{Text="0", Value="0",Selected = true },
                         new SelectListItem{Text="1", Value="1"},
@@ -129,10 +139,13 @@
                 @Html.ValidationMessageFor(model => model.Menu3, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        <br/>
+        <br />
         <div class="form-group">
+            <img src="~/Resouces/boneless_chicken.jpg" alt="" width="300" height="300" />
             @Html.LabelFor(model => model.Menu4, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <strong style="font-size:20px;margin:30px;">$10</strong>
+            <div class="col-md-10" style="margin-left:500px;">
                 @Html.DropDownListFor(model => model.Menu4, new List<SelectListItem>
                         { new SelectListItem{Text="0", Value="0",Selected = true },
                         new SelectListItem{Text="1", Value="1"},
@@ -145,10 +158,13 @@
                 @Html.ValidationMessageFor(model => model.Menu4, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        <br/>
+        <br />
         <div class="form-group">
+            <img src="~/Resouces/hamburger.jpeg" alt="adfadfasdfafdsa" width="300" height="300" />
             @Html.LabelFor(model => model.Menu5, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <strong style="font-size:20px; margin:30px;">$6</strong>
+            <div class="col-md-10" style="margin-left:500px;">
                 @Html.DropDownListFor(model => model.Menu5, new List<SelectListItem>
                         { new SelectListItem{Text="0", Value="0",Selected = true },
                         new SelectListItem{Text="1", Value="1"},
