@@ -1,0 +1,182 @@
+﻿@model RestaurantManagementSystem.Models.Reservation
+
+@{
+    ViewBag.Title = "InsertReservation";
+    TempData["email"] = @HttpContext.Current.User.Identity.Name;
+}
+
+<h2 style=" margin-top: 80px">New Reservation</h2>
+
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+@if (ViewBag.Message != "")
+{
+    <div class="text-danger">@ViewBag.Message</div>
+}
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.Persons, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Persons, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Persons, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FromTime, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.FromTime, new List<SelectListItem>
+                        { new SelectListItem{Text="6AM", Value="6 AM",Selected = true },
+                        new SelectListItem{Text="7 AM", Value="7 AM"},
+                        new SelectListItem{Text="8 AM", Value="8 AM"},
+                        new SelectListItem{Text="9 AM", Value="9 AM"},
+                        new SelectListItem{Text="10 AM", Value="10 AM"},
+                        new SelectListItem{Text="11 AM", Value="11 AM"},
+                        new SelectListItem{Text="12 PM", Value="12 AM"},
+                        new SelectListItem{Text="1 PM", Value="1 PM"},
+                        new SelectListItem{Text="2 PM", Value="2 PM"},
+                        new SelectListItem{Text="3 PM", Value="3 PM"},
+                        new SelectListItem{Text="4 PM", Value="4 PM"},
+                        new SelectListItem{Text="5 PM", Value="5 PM"},
+                        new SelectListItem{Text="6 PM", Value="6 PM"},
+                    })
+                @Html.ValidationMessageFor(model => model.FromTime, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ToTime, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.ToTime, new List<SelectListItem>
+                        { new SelectListItem{Text="6AM", Value="6 AM"},
+                        new SelectListItem{Text="7 AM", Value="7 AM",Selected = true },
+                        new SelectListItem{Text="8 AM", Value="8 AM"},
+                        new SelectListItem{Text="9 AM", Value="9 AM"},
+                        new SelectListItem{Text="10 AM", Value="10 AM"},
+                        new SelectListItem{Text="11 AM", Value="11 AM"},
+                        new SelectListItem{Text="12 PM", Value="12 AM"},
+                        new SelectListItem{Text="1 PM", Value="1 PM"},
+                        new SelectListItem{Text="2 PM", Value="2 PM"},
+                        new SelectListItem{Text="3 PM", Value="3 PM"},
+                        new SelectListItem{Text="4 PM", Value="4 PM"},
+                        new SelectListItem{Text="5 PM", Value="5 PM"},
+                        new SelectListItem{Text="6 PM", Value="6 PM"},
+                    })
+                @Html.ValidationMessageFor(model => model.ToTime, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Menu1, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Menu1, new List<SelectListItem>
+                        { new SelectListItem{Text="0", Value="0",Selected = true },
+                        new SelectListItem{Text="1", Value="1"},
+                        new SelectListItem{Text="2", Value="2"},
+                        new SelectListItem{Text="3", Value="3"},
+                        new SelectListItem{Text="4", Value="4"},
+                        new SelectListItem{Text="5", Value="5"},
+                        new SelectListItem{Text="6", Value="6"},
+                    })
+                @Html.ValidationMessageFor(model => model.Menu1, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Menu2, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Menu2, new List<SelectListItem>
+                        { new SelectListItem{Text="0", Value="0",Selected = true },
+                        new SelectListItem{Text="1", Value="1"},
+                        new SelectListItem{Text="2", Value="2"},
+                        new SelectListItem{Text="3", Value="3"},
+                        new SelectListItem{Text="4", Value="4"},
+                        new SelectListItem{Text="5", Value="5"},
+                        new SelectListItem{Text="6", Value="6"},
+                    })
+                @Html.ValidationMessageFor(model => model.Menu2, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Menu3, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Menu3, new List<SelectListItem>
+                        { new SelectListItem{Text="0", Value="0",Selected = true },
+                        new SelectListItem{Text="1", Value="1"},
+                        new SelectListItem{Text="2", Value="2"},
+                        new SelectListItem{Text="3", Value="3"},
+                        new SelectListItem{Text="4", Value="4"},
+                        new SelectListItem{Text="5", Value="5"},
+                        new SelectListItem{Text="6", Value="6"},
+                    })
+                @Html.ValidationMessageFor(model => model.Menu3, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Menu4, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Menu4, new List<SelectListItem>
+                        { new SelectListItem{Text="0", Value="0",Selected = true },
+                        new SelectListItem{Text="1", Value="1"},
+                        new SelectListItem{Text="2", Value="2"},
+                        new SelectListItem{Text="3", Value="3"},
+                        new SelectListItem{Text="4", Value="4"},
+                        new SelectListItem{Text="5", Value="5"},
+                        new SelectListItem{Text="6", Value="6"},
+                    })
+                @Html.ValidationMessageFor(model => model.Menu4, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Menu5, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Menu5, new List<SelectListItem>
+                        { new SelectListItem{Text="0", Value="0",Selected = true },
+                        new SelectListItem{Text="1", Value="1"},
+                        new SelectListItem{Text="2", Value="2"},
+                        new SelectListItem{Text="3", Value="3"},
+                        new SelectListItem{Text="4", Value="4"},
+                        new SelectListItem{Text="5", Value="5"},
+                        new SelectListItem{Text="6", Value="6"},
+                    })
+                @Html.ValidationMessageFor(model => model.Menu5, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <br />
+                    <br />
+                    <p style=" margin-left:100px;">I agree to the Terms and conditions of RMS.</p>
+                </div>
+             </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Reserve" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Reservation Menu", "Reservation","Home", new { area = "" }, new { @class = "btn btn-default" })
+</div>

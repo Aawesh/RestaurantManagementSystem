@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "ReservationDetails";
+}
+
+<h2 style=" margin-top: 80px">Coupon Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Email :
+        </dt>
+
+        <dd>
+            @TempData["email"]
+        </dd>
+
+        </br>
+
+        <dt>
+            Number of persons :
+        </dt>
+
+        <dd>
+            @TempData["person"]
+        </dd>
+        </br>
+
+        <dt>
+            Reservation for :
+        </dt>
+
+        <dd>
+            @TempData["date"]
+        </dd>
+
+        </br>
+
+        <dt>
+            From Time :
+        </dt>
+
+        <dd>
+            @TempData["fromTime"]
+        </dd>
+
+        </br>
+
+        <dt>
+            To Time :
+        </dt>
+
+        <dd>
+            @TempData["toTime"]
+        </dd>
+
+        </br>
+
+        <dt>
+            Details :
+        </dt>
+
+        <dd>
+            @TempData["details"]
+        </dd>
+
+        </br>
+
+        <dt>
+            Total price : 
+        </dt>
+
+        <dd>
+            @TempData["price"] (including tax 7.5%)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Confirm", "ReservationSuccessful", "Reservation", new { area = "" }, new { @class = "btn btn-default" })
+</p>

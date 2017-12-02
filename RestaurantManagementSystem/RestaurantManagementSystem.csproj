@@ -153,6 +153,7 @@
     <Compile Include="Controllers\CouponController.cs" />
     <Compile Include="Controllers\FoodController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReservationController.cs" />
     <Compile Include="Controllers\SalesController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Crypto.cs" />
@@ -180,6 +181,7 @@
     </Compile>
     <Compile Include="Models\Extended\Coupon.cs" />
     <Compile Include="Models\Extended\Food.cs" />
+    <Compile Include="Models\Extended\Reservation.cs" />
     <Compile Include="Models\Extended\Sale.cs" />
     <Compile Include="Models\Extended\User.cs" />
     <Compile Include="Models\Food.cs">
@@ -199,6 +201,24 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FoodModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reservation.cs">
+      <DependentUpon>ReservationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ReservationModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReservationModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ReservationModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReservationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ReservationModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReservationModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Sale.cs">
       <DependentUpon>SalesModel.tt</DependentUpon>
@@ -266,6 +286,16 @@
       <DependentUpon>FoodModel.edmx</DependentUpon>
       <LastGenOutput>FoodModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\ReservationModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ReservationModel.edmx</DependentUpon>
+      <LastGenOutput>ReservationModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ReservationModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ReservationModel.edmx</DependentUpon>
+      <LastGenOutput>ReservationModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\SalesModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>SalesModel.edmx</DependentUpon>
@@ -330,6 +360,13 @@
     <Content Include="Models\CouponModel.edmx.diagram">
       <DependentUpon>CouponModel.edmx</DependentUpon>
     </Content>
+    <EntityDeploy Include="Models\ReservationModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ReservationModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ReservationModel.edmx.diagram">
+      <DependentUpon>ReservationModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -377,6 +414,9 @@
     <Content Include="Views\Coupon\CouponDetails.cshtml" />
     <Content Include="Views\Coupon\EditCoupon.cshtml" />
     <Content Include="Views\Coupon\DeleteCoupon.cshtml" />
+    <Content Include="Views\Reservation\InsertReservation.cshtml" />
+    <Content Include="Views\Reservation\ReservationDetails.cshtml" />
+    <Content Include="Views\Reservation\ReservationSuccessful.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
