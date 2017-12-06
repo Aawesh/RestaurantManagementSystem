@@ -328,9 +328,9 @@
     <Content Include="Resouces\image5.jpg" />
     <Content Include="Resouces\logo1.png" />
     <Content Include="Resouces\reservation.png" />
-    <Content Include="Resouces\rest.jpg" />
     <Content Include="Resouces\rest2.jpg" />
     <Content Include="Resouces\rest3.jpg" />
+    <Content Include="Resouces\rest_food.jpg" />
     <Content Include="Resouces\secure_payment.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

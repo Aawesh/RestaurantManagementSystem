@@ -42,19 +42,17 @@
             @Html.LabelFor(model => model.FromTime, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownListFor(model => model.FromTime, new List<SelectListItem>
-                        { new SelectListItem{Text="6AM", Value="6 AM",Selected = true },
-                        new SelectListItem{Text="7 AM", Value="7 AM"},
-                        new SelectListItem{Text="8 AM", Value="8 AM"},
-                        new SelectListItem{Text="9 AM", Value="9 AM"},
-                        new SelectListItem{Text="10 AM", Value="10 AM"},
-                        new SelectListItem{Text="11 AM", Value="11 AM"},
-                        new SelectListItem{Text="12 PM", Value="12 AM"},
-                        new SelectListItem{Text="1 PM", Value="1 PM"},
-                        new SelectListItem{Text="2 PM", Value="2 PM"},
-                        new SelectListItem{Text="3 PM", Value="3 PM"},
-                        new SelectListItem{Text="4 PM", Value="4 PM"},
-                        new SelectListItem{Text="5 PM", Value="5 PM"},
-                        new SelectListItem{Text="6 PM", Value="6 PM"},
+           { new SelectListItem { Text = "8 AM", Value = "8 AM", Selected = true },
+                        new SelectListItem { Text = "9 AM", Value = "9 AM" },
+                        new SelectListItem { Text = "10 AM", Value = "10 AM" },
+                        new SelectListItem { Text = "11 AM", Value = "11 AM" },
+                        new SelectListItem { Text = "12 PM", Value = "12 AM" },
+                        new SelectListItem { Text = "1 PM", Value = "1 PM" },
+                        new SelectListItem { Text = "2 PM", Value = "2 PM" },
+                        new SelectListItem { Text = "3 PM", Value = "3 PM" },
+                        new SelectListItem { Text = "4 PM", Value = "4 PM" },
+                        new SelectListItem { Text = "5 PM", Value = "5 PM" },
+                        new SelectListItem { Text = "6 PM", Value = "6 PM" },
                     })
                 @Html.ValidationMessageFor(model => model.FromTime, "", new { @class = "text-danger" })
             </div>
@@ -64,9 +62,7 @@
             @Html.LabelFor(model => model.ToTime, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10" >
                 @Html.DropDownListFor(model => model.ToTime, new List<SelectListItem>
-                        { new SelectListItem{Text="6AM", Value="6 AM"},
-                        new SelectListItem{Text="7 AM", Value="7 AM",Selected = true },
-                        new SelectListItem{Text="8 AM", Value="8 AM"},
+           { new SelectListItem{Text="8 AM", Value="8 AM",Selected = true},
                         new SelectListItem{Text="9 AM", Value="9 AM"},
                         new SelectListItem{Text="10 AM", Value="10 AM"},
                         new SelectListItem{Text="11 AM", Value="11 AM"},
@@ -83,7 +79,7 @@
         </div>
 
         <div class="form-group">
-            <img src="~/Resouces/chicken_sandwich.png" alt="" width="300" height="300">
+            <img src="~/Resouces/chicken_sandwich.png" alt="" width="150" height="150">
             @Html.LabelFor(model => model.Menu1, htmlAttributes: new { @class = "control-label col-md-2" })
            <strong style="font-size:20px;margin:30px;">$8</strong>
             <div class="col-md-10" style="margin-left:500px;">
@@ -104,7 +100,7 @@
         <br />
 
         <div class="form-group">
-            <img src="~/Resouces/chicken_nuggets.jpg" alt="" width="300" height="300" />
+            <img src="~/Resouces/chicken_nuggets.jpg" alt="" width="150" height="150" />
             @Html.LabelFor(model => model.Menu2, htmlAttributes: new { @class = "control-label col-md-2" })
             <strong style="font-size:20px;margin:30px;">$4</strong>
             <div class="col-md-10" style="margin-left:500px;">
@@ -123,7 +119,7 @@
         <br/>
         <br />
         <div class="form-group">
-            <img src="~/Resouces/chicken_pizza.jpg" alt="" width="300" height="300" />
+            <img src="~/Resouces/chicken_pizza.jpg" alt="" width="150" height="150" />
             @Html.LabelFor(model => model.Menu3, htmlAttributes: new { @class = "control-label col-md-2" })
             <strong style="font-size:20px;margin:30px;">$5</strong>
             <div class="col-md-10" style="margin-left:500px;">
@@ -142,7 +138,7 @@
         <br/>
         <br />
         <div class="form-group">
-            <img src="~/Resouces/boneless_chicken.jpg" alt="" width="300" height="300" />
+            <img src="~/Resouces/boneless_chicken.jpg" alt="" width="150" height="150" />
             @Html.LabelFor(model => model.Menu4, htmlAttributes: new { @class = "control-label col-md-2" })
             <strong style="font-size:20px;margin:30px;">$10</strong>
             <div class="col-md-10" style="margin-left:500px;">
@@ -161,7 +157,7 @@
         <br/>
         <br />
         <div class="form-group">
-            <img src="~/Resouces/hamburger.jpeg" alt="adfadfasdfafdsa" width="300" height="300" />
+            <img src="~/Resouces/hamburger.jpeg" alt="adfadfasdfafdsa" width="150" height="150" />
             @Html.LabelFor(model => model.Menu5, htmlAttributes: new { @class = "control-label col-md-2" })
             <strong style="font-size:20px; margin:30px;">$6</strong>
             <div class="col-md-10" style="margin-left:500px;">
